@@ -1,0 +1,23 @@
+curl -i 'http://localhost:9080/products' -H 'Content-Type:application/json' -d '
+{
+  "sku": "sku8585",
+  "title": "Galaxy 32S32 Smart LED TV",
+  "description": "1080 Full HD TV with streaming built in",
+  "type": "TV",
+  "shipping": [{
+    "weight": "28",
+    "dimensions": {
+      "width": 100,
+      "height": 60,
+      "depth": 50
+    }
+  }],
+  "details": {
+    "title": "HD TV with Rouku built in",
+    "type": "HDTV",
+    "tracks": ["Smart TV", "HDTV", "Rouku"]
+  }
+}
+'
+
+curl 'http://localhost:9080/products?type=TV&details.type=HDTV'
