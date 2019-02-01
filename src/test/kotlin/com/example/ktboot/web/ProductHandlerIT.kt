@@ -1,5 +1,6 @@
 package com.example.ktboot.web
 
+import com.example.ktboot.Application
 import com.example.ktboot.test.TestData
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -9,7 +10,8 @@ import org.springframework.http.MediaType
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+    classes = [Application::class])
 @ActiveProfiles("test")
 class ProductHandlerIT {
     @Autowired lateinit var webClient: WebTestClient
