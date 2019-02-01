@@ -29,3 +29,5 @@ gradle/
 .mvn/
 logs/
 bin/
+
+.vscode/
