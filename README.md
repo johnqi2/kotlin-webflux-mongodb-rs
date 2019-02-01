@@ -1,9 +1,10 @@
  
 #### Introduction
 A demo of Spring WebFlux Rest API using kotlin and reactive technology stacks, including Spring WebFlux, spring-boot-starter-webflux, spring-boot-starter-data-mongodb-reactive, and MongoDB reactive streams.
+This branch migrates to support Java 11.
  
 #### Technology Stacks
-* Java 8
+* Java 11
 * Kotlin
 * Spring framework & Spring Boot
   * Spring WebFlux
@@ -11,7 +12,7 @@ A demo of Spring WebFlux Rest API using kotlin and reactive technology stacks, i
   * spring-boot-starter-data-mongodb-reactive
 * MongoDB, MongoDB Reactive Stream
 * Embedded Mongo
-* Maven, Gradle
+* Maven, Gradle 5.X
 * Junit 5, Mokito
 #### Instruction
 * To run the project, make sure the MongoDB Community Server 4.0+ installed and running locally.
