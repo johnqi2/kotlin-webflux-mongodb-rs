@@ -1,6 +1,6 @@
 buildscript {
   ext {
-    kotlinVersion = "1.2.7.1"
+    kotlinVersion = "1.2.71"
     springBootVersion = '2.1.2.RELEASE'
   }
   repositories {
@@ -17,9 +17,9 @@ plugins {
   id "io.spring.dependency-management" version "1.0.6.RELEASE"
 
   id "org.jetbrains.kotlin.jvm" version "1.2.71"
-  id "org.jetbrains.kotlin.plugin.spring" version "1.2.7.1"
-  id "org.jetbrains.kotlin.plugin.allopen" version "1.2.7.1"
-  id "org.jetbrains.kotlin.plugin.noarg" version "1.2.7.1"
+  id "org.jetbrains.kotlin.plugin.spring" version "1.2.71"
+  id "org.jetbrains.kotlin.plugin.allopen" version "1.2.71"
+  id "org.jetbrains.kotlin.plugin.noarg" version "1.2.71"
   id "com.adarshr.test-logger" version "1.6.0"
 }
 
@@ -38,8 +38,8 @@ dependencies {
   // kotlin
   implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
   implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-  implementation 'org.jetbrains.kotlin:kotlin-reflect:1.2.71'
-  implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.2.71'
+  implementation 'org.jetbrains.kotlin:kotlin-reflect'
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
   // logging
   implementation 'io.github.microutils:kotlin-logging:1.6.22'
 
