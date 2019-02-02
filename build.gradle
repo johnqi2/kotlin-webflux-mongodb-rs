@@ -1,6 +1,6 @@
 buildscript {
   ext {
-    kotlinVersion = '1.2.71'
+    kotlinVersion = "1.2.7.1"
     springBootVersion = '2.1.2.RELEASE'
   }
   repositories {
@@ -9,21 +9,19 @@ buildscript {
       url "https://plugins.gradle.org/m2/"
     }
   }
-  dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-    classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-    classpath("org.jetbrains.kotlin:kotlin-noarg:${kotlinVersion}")
-    classpath("com.adarshr:gradle-test-logger-plugin:1.6.0")
-  }
 }
 
-apply plugin: 'kotlin'
-apply plugin: 'kotlin-spring'
+plugins {
+  id "java"
+  id 'org.springframework.boot' version "2.1.2.RELEASE"
+  id "io.spring.dependency-management" version "1.0.6.RELEASE"
 
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'com.adarshr.test-logger'
+  id "org.jetbrains.kotlin.jvm" version "1.2.71"
+  id "org.jetbrains.kotlin.plugin.spring" version "1.2.7.1"
+  id "org.jetbrains.kotlin.plugin.allopen" version "1.2.7.1"
+  id "org.jetbrains.kotlin.plugin.noarg" version "1.2.7.1"
+  id "com.adarshr.test-logger" version "1.6.0"
+}
 
 group = 'com.example.ktboot'
 version = '0.5.2'
@@ -51,9 +49,8 @@ dependencies {
     exclude group: 'junit', module: 'junit'
   }
   testImplementation 'org.junit.jupiter:junit-jupiter-api'
-  testCompile 'org.junit.jupiter:junit-jupiter-params'
-  testRuntime 'org.junit.jupiter:junit-jupiter-engine'
-  testRuntime 'de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+  testRuntimeOnly 'de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0'
 }
 
 compileKotlin {
